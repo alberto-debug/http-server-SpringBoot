@@ -33,6 +33,18 @@ public class StudentService {
         return studentReposisory.findById(id);
     }
 
+    public Student updateStudent(Long id, StudentDTO studentDTO){
+        Optional<Student> optionalStudent = studentReposisory.findById(id);
+        if (optionalStudent.isPresent()){
+            Student student = optionalStudent.get();
+            student.setName(studentDTO.getName());
+            student.setEmail(studentDTO.getEmail());
+            studentDTO.setStudentId(studentDTO.getStudentId());
+            return studentReposisory.save(student);
+        }
+        throw new RuntimeException("Student Not found");
+    }
+
 
 
 
