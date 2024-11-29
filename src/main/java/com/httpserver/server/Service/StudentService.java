@@ -45,7 +45,7 @@ public class StudentService {
         throw new RuntimeException("Student Not found");
     }
 
-
-
-
+    public void deleteStudent(Long id){
+        studentReposisory.deleteById(id);
+    }
 }
