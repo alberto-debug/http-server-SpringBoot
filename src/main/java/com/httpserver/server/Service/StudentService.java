@@ -20,8 +20,8 @@ public class StudentService {
 
         Student student = new Student();
         student.setName(studentDTO.getName());
-        student.setEmail(student.getEmail());
-        student.setStudentId(student.getStudentId());
+        student.setEmail(studentDTO.getEmail());
+        student.setStudentId(studentDTO.getStudentId());
         return studentReposisory.save(student);
     }
 
