@@ -25,6 +25,7 @@ public class StudentService {
         return studentReposisory.save(student);
     }
 
+    
     public List<Student> getAllStudents(){
         return studentReposisory.findAll();
     }
