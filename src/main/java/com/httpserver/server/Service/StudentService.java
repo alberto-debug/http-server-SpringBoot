@@ -25,10 +25,12 @@ public class StudentService {
         return studentReposisory.save(student);
     }
 
-    
+
     public List<Student> getAllStudents(){
         return studentReposisory.findAll();
     }
+
+
 
     public Optional<Student> getAllStudentById(Long id){
         return studentReposisory.findById(id);
